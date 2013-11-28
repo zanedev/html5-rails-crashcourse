@@ -1,0 +1,35 @@
+%section
+  .right-column
+    This is my right column
+    #template-example
+
+  %p.centered This is a test yes
+  %button#myButton Click Me
+%section
+  / Button trigger modal
+  %button.btn.btn-primary.btn-lg{"data-target" => "#myModal", "data-toggle" => "modal"}
+    Launch demo modal
+  / Modal
+  #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+    .modal-dialog
+      .modal-content
+        .modal-header
+          %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+          %h4#myModalLabel.modal-title Modal title
+        .modal-body
+          \...
+        .modal-footer
+          %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+          %button.btn.btn-primary{type: "button"} Save changes
+      / /.modal-content
+    / /.modal-dialog
+  / /.modal
+%section
+  .slideshow{"data-cycle-fx" => "scrollHorz", "data-cycle-timeout" => "0"}
+    / prev/next links
+    .cycle-prev
+    .cycle-next
+    %img{src: "http://jquery.malsup.com/cycle2/images/p1.jpg"}/
+    %img{src: "http://jquery.malsup.com/cycle2/images/p2.jpg"}/
+    %img{src: "http://jquery.malsup.com/cycle2/images/p3.jpg"}/
+    %img{src: "http://jquery.malsup.com/cycle2/images/p4.jpg"}/
